@@ -1,0 +1,8 @@
+# Create a base map
+m_5 = folium.Map(location=[42.32,-71.0589], tiles='cartodbpositron', zoom_start=12)
+
+# Add a heatmap to the base map
+HeatMap(data=crimes[['Lat', 'Long']], radius=10).add_to(m_5)
+
+# Display the map
+m_5
